@@ -1,0 +1,21 @@
+# get cpp code
+SOLUTION=solution.cpp
+SOURCE=$(SOLUTION)
+
+TARGET=solution
+
+INCLDIR = -I../000-tools/
+
+CC=g++
+CFLAGE=-ggdb $(INCLDIR)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECT)
+	$(CC) $(CFLAGE) -o $< $@
+
+$(OBJECT):$(SOURCE)
+	$(CC) $(CFLAGE) -c $< -o $@ $(VAR)
+
+clean:
+	rm $(OBJECT) $(TARGET)
