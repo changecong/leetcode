@@ -1,0 +1,11 @@
+# make files
+makefile
+
+# temp files
+*~
+
+# object files
+*.o
+
+# excutive files
+solution
