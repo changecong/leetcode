@@ -4,12 +4,15 @@
  * Version:       
  * Author:        Zhicong Chen <zhicong.chen@changecong.com>
  * Created at:    Mon Jan  6 12:30:22 2014
- * Modified at:   Mon Jan  6 12:32:45 2014
+ * Modified at:   Fri Jan 17 12:14:03 2014
  * Modified by:   Zhicong Chen <zhicong.chen@changecong.com>
  * Status:        Experimental, do not distribute.
  * Description:   
  *
  */
+
+#ifndef TIMER_HPP
+#define TIMER_HPP
 
 #include <fstream>  // ofstream
 #include <sys/time.h>  // gettimeofday
@@ -31,7 +34,7 @@
 // write to file
 // nzmax
 #define TIME_WRITE_TO_FILE(filename, arg) myFile.open(filename, ios::app);  \
-    myFile << "Whatever you want to put here!";
+    myFile << "Whatever you want to put here!";  \
     myFile.close();
 
-#endif
+#endif  // TIMER_HPP
