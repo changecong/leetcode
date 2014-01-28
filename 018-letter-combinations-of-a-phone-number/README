@@ -2,11 +2,9 @@ Given a digit string, return all possible letter combinations that the number co
 
 A mapping of digit to letters (just like on the telephone buttons) is given below.
 
-<<<<<<< HEAD
-![](https://github.com/changecong/leetcode/raw/master/018-letter-combinations-of-a-phone-number/200px-Telephone-keypad2.png)
-=======
-![](http://github.com/changecong/leetcode/raw/master/018-letter-combinations-of-a-phone-number/200px-Telephone-keypad2.svg.png)
->>>>>>> 1745ca171da56b59967a55d0504f775c831a6e91
+![Test](http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
+
+[Resource](http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
 
 Input:Digit string "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
