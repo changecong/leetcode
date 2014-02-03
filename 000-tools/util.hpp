@@ -4,7 +4,7 @@
  * Version:       
  * Author:        Zhicong Chen <zhicong.chen@changecong.com>
  * Created at:    Mon Jan  6 13:10:40 2014
- * Modified at:   Mon Jan  6 14:33:02 2014
+ * Modified at:   Fri Jan 31 11:38:08 2014
  * Modified by:   Zhicong Chen <zhicong.chen@changecong.com>
  * Status:        Experimental, do not distribute.
  * Description:   
@@ -35,7 +35,7 @@ namespace util {
         }
 
         target = (int)(target*2/len);
-        std::cout << "target: " << target << std::endl;
+        // std::cout << "target: " << target << std::endl;
     }
 
 }
