@@ -23,5 +23,8 @@ $(OBJECT):$(SOURCE)
 test:
 	@./$(TARGET)
 
+time:
+	@time ./$(TARGET)
+
 clean:
 	rm $(OBJECT) $(TARGET)
