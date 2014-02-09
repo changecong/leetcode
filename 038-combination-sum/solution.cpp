@@ -4,10 +4,10 @@
  * Version:       
  * Author:        Zhicong Chen <zhicong.chen@changecong.com>
  * Created at:    Fri Feb  7 15:01:52 2014
- * Modified at:   Sat Feb  8 21:22:07 2014
+ * Modified at:   Sat Feb  8 21:47:09 2014
  * Modified by:   Zhicong Chen <zhicong.chen@changecong.com>
  * Status:        Experimental, do not distribute.
- * Description:   
+ * Description:   Assume that the candidates [C] has no duplications
  *
  */
 
@@ -35,7 +35,7 @@ private:
 
             prev.push_back(candidates[i]);
 
-            if (target >= 0) {
+            if (target > 0) {
                 combinationSumRecursive(candidates,
                                         target - candidates[i],
                                         results,
@@ -79,12 +79,15 @@ int main() {
     Solution s;
 
     vector<int> candidates;
+    candidates.push_back(10);
     candidates.push_back(1);
-    candidates.push_back(3);
-    // candidates.push_back(6);
-    // candidates.push_back(7);
+    candidates.push_back(2);
+    candidates.push_back(7);
+    candidates.push_back(6);
+    // candidates.push_back(1);
+    candidates.push_back(5);
 
-    int target = 0;
+    int target = 8;
     
     vector<vector<int> > results = s.combinationSum(candidates, target);
 
