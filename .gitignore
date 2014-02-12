@@ -3,6 +3,8 @@ makefile
 
 # temp files
 *~
+#*#
+.#*
 
 # object files
 *.o
