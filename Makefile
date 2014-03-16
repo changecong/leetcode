@@ -8,7 +8,7 @@ OBJECT=$(TARGET).o
 INCLDIR = -I../000-tools/
 
 CC=g++
-CFLAGE=-ggdb $(INCLDIR)
+CFLAGE=-Wall -ggdb $(INCLDIR)
 
 # VAR=-D BRUTE_FORCE
 
