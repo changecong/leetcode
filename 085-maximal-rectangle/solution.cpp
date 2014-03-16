@@ -4,7 +4,7 @@
  * Version:       
  * Author:        Zhicong Chen <zhicong.chen@changecong.com>
  * Created at:    Sat Mar 15 00:10:22 2014
- * Modified at:   Sun Mar 16 01:52:28 2014
+ * Modified at:   Sun Mar 16 10:58:51 2014
  * Modified by:   Zhicong Chen <zhicong.chen@changecong.com>
  * Status:        Experimental, do not distribute.
  * Description:   
@@ -38,9 +38,7 @@ private:
                 
                 indics.push(i++);
 
-            }
-
-            if (bars[i] < bars[indics.top()]) {  // pop
+            } else {  // pop
 
                 int height = bars[indics.top()];
                 indics.pop();
@@ -95,14 +93,19 @@ public:
 
          */
 
+        // last line
+        for (int j = 0; j < cols; ++j) {
+            matrix01[rows-1][j] = matrix[rows-1][j] - '0';
+        }
+
         for (int i = rows - 2; i >= 0; --i) {  // each row
             
-            for (int j = 0; j < rows; ++j) {
+            for (int j = 0; j < cols; ++j) {
                 
-                matrix01[i][j] = matrix[i][j] - '0' + matrix[i + 1][j] - '0';
-                
+                if (matrix[i][j] != '0') {
+                    matrix01[i][j] = matrix[i][j] - '0' + matrix01[i + 1][j];
+                }
             }
-
         }
 
         /*
@@ -118,7 +121,6 @@ public:
         for (int i = 0; i < rows; ++i) {
             
             int max = maxArea(matrix01[i]);
-
             result = (result < max) ? max : result;
         }
 
@@ -133,21 +135,23 @@ int main() {
 
     Solution s;
 
-    int A[6][5] = {
-        {0, 0, 0, 0, 0},
-        {0, 1, 0, 0, 0},
-        {0, 1, 1, 0, 0},
-        {0, 0, 1, 1, 1},
-        {0, 0, 1, 1, 1},
-        {0, 0, 0, 1, 1}
-    };
+    // int A[6][5] = {
+    //     {0, 0, 0, 0, 0},
+    //     {0, 1, 0, 0, 0},
+    //     {0, 1, 1, 0, 0},
+    //     {0, 0, 1, 1, 1},
+    //     {0, 0, 1, 1, 1},
+    //     {0, 0, 0, 1, 1}
+    // };
 
-    vector<char> temp(3, '0');
-    vector<vector<char> > matrix(4, temp);
+    // int A[2][2] = {{0, 1}, {1, 0}};
+
+    vector<char> temp(4, '1');
+    vector<vector<char> > matrix(3, temp);
     
-    // for (int i = 0; i < 6; i++) {
+    // for (int i = 0; i < 2; i++) {
 
-    //     for (int j = 0; j < 5; j++) {
+    //     for (int j = 0; j < 2; j++) {
     //         cout << A[i][j] << " ";
     //         matrix[i][j] = A[i][j] + '0';
     //     }
