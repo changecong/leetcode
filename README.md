@@ -22,3 +22,17 @@ All the code contain a main() function in which there is some simple test code, 
     make test
 
 to run the excutive.
+
+
+Timing
+======
+
+run
+
+    make time
+
+
+Profiling
+=========
+
+see header `000-tools/timer.hpp`
