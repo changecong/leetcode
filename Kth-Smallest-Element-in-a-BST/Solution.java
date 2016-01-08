@@ -11,7 +11,7 @@ public class Solution {
     /**
      * position of current node 
      */
-    private intposition = 0;
+    private int position = 0;
 
     public int kthSmallest(TreeNode root, int k) {
 	return findkthSmallest(root, k).intValue();
